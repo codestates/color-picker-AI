@@ -1,0 +1,41 @@
+#title {
+    font-size: 50px;
+    text-align: center;
+    margin: 100px;
+    font-family: 'Yellowtail', cursive;
+    color: #1F9AE0;
+}
+
+button {
+    color: white;
+    background-color: #1F9AE0;
+    letter-spacing: 5px;
+    text-align: center;
+    margin: 100px auto;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 25px;
+    display: block;
+    animation: btnAni 1.5s ease-in-out infinite both;
+    font-family: 'Yellowtail', cursive;
+    font-weight: 800;
+    font-size: 30px;
+}
+
+button:hover {
+    background-color: #1e75a7;
+}
+
+#webcam-container {
+    text-align: center;
+    display: block;
+    margin: 100px auto;
+}
+
+#label-container {
+    text-align: center;
+    display: block;
+    margin: 100px auto;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 30px;
+}
