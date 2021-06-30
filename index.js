@@ -49,17 +49,17 @@ async function predict() {
     const prediction = await model.predict(webcam.canvas);
 
     if(prediction[0].className === "노란색" && prediction[0].probability.toFixed(2) == 1.00) {
-        //! 이미지가 노란색인 조건에 부합한 경우
-        labelContainer.childNodes[0].innerHTML = '노란색'
-        labelContainer.style.color = "#ffd801"
+        //! (1단계) 이미지가 노란색인 조건에 부합한 경우
+        labelContainer.childNodes[0].innerHTML = "이 색은 무슨 색인지 설명을 적어주세요."
+        labelContainer.style.color = "글자 색상을 어떤 색으로 표현할까요?"
     } else if(prediction[1].className === "하늘색" && prediction[1].probability.toFixed(2) == 1.00) {
-        //! 이미지가 하늘색인 조건에 부합한 경우
-        labelContainer.childNodes[0].innerHTML = '하늘색'
-        labelContainer.style.color = "#1F9AE0"
+        //! (2단계) 이미지가 하늘색인 조건에 부합한 경우
+        labelContainer.childNodes[0].innerHTML = "이 색은 무슨 색인지 설명을 적어주세요."
+        labelContainer.style.color = "글자 색상을 어떤 색으로 표현할까요?"
     } else if(prediction[3].className === "검정색" && prediction[3].probability.toFixed(2) == 1.00) {
-        //! 이미지가 검정색인 조건에 부합한 경우
-        labelContainer.childNodes[0].innerHTML = '검정색'
-        labelContainer.style.color = "#000000"
+        //! (3단계) 이미지가 검정색인 조건에 부합한 경우
+        labelContainer.childNodes[0].innerHTML = "이 색은 무슨 색인지 설명을 적어주세요."
+        labelContainer.style.color = "글자 색상을 어떤 색으로 표현할까요?"
     } else {
         labelContainer.childNodes[0].innerHTML = '색상을 찾을 수 없습니다.'
         labelContainer.style.color = "#000000"
